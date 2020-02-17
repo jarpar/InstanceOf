@@ -6,12 +6,13 @@ public class Main {
         osoba[0] = new Pracownik("Jarosław", "Partyka", 1_000_000D);
         osoba[1] = new Student("Andrzej", "Testowy");
 
-        for (int i = 0; i < osoba.length; i++) {
+        for (Osoba person : osoba) {
             //try {
-            if (osoba[i] instanceof Osoba) {
-                osoba[i].pobierzOpis();
+            if (person instanceof Osoba) {
+                person.pobierzOpis();
                 System.out.println();
-            } //catch (Exception e) {
+            } else
+                break;//catch (Exception e) {
             //continue;
             //}
         }
